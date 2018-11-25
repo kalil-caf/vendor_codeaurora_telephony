@@ -44,7 +44,8 @@ public class ServiceUtil {
     static public boolean bindService(Context context, ServiceConnection connection) {
         IBinder extTelephony = ServiceManager.getService("extphone");
 
-        boolean success = (extTelephony != null)? true: false;
+        //boolean success = (extTelephony != null)? true: false;
+        boolean success = false; // HACK
 
         if (success) {
             connection.onServiceConnected(
